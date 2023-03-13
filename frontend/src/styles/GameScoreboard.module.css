@@ -1,0 +1,52 @@
+.scoreboardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  border: 1px solid rgb(200, 200, 200);
+  padding: 30px;
+}
+
+.logo {
+  width: 50px;
+}
+
+.record {
+  font-size: 0.7rem;
+  color: #48494a;
+  text-transform: uppercase;
+}
+
+.awayTeamContent,
+.homeTeamContent {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.teamName {
+  font-size: 1.2rem;
+}
+
+.score {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.gameStatus {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.gameStatusText {
+  margin: 5px 0 0 0;
+}
+
+.record {
+  font-size: 0.8rem;
+}

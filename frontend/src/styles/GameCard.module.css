@@ -1,0 +1,62 @@
+.card {
+  border: 1px solid rgb(89, 89, 89);
+  width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: flex-start; */
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.gameStatus {
+  margin: 0 10px 0 0;
+}
+
+.logo {
+  width: 30px;
+}
+
+.teamName {
+  font-size: 0.9rem;
+}
+
+.record {
+  position: absolute;
+  right: 0;
+  margin: 0 15px 0 0;
+  font-size: 0.9rem;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.awayTeamContent,
+.homeTeamContent {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.liveScore {
+  position: absolute;
+  right: 0;
+  margin: 0 15px 0 0;
+}
+
+
+.scoreAndTime {
+
+}
+

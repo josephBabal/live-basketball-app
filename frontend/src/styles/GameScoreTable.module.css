@@ -1,0 +1,87 @@
+/* .tableContainer {
+  font-size: 0.7rem;
+  width: 200px;
+  color: rgb(160, 160, 160);
+}
+
+.periodRow {
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px 5px 50px;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+
+.period {
+  width: 30px;
+}
+
+
+.teamPeriodScoreContainer {
+  display: flex;
+  margin: 5px 100px 0 0;
+}
+
+.tricode {
+  min-width: 46px;
+}
+
+.periodScoreRow {
+  display: flex;
+  width: 100%;
+  gap: 23px;
+  margin-left: 2px;
+}
+
+.periodScore {
+  width: 30px;
+} */
+
+
+/*  */
+
+.table {
+  font-size: 0.7rem;
+  color: #6c6d6f;
+  margin: 3px 0 0 0;
+}
+
+.tableHeader {
+  display: flex;
+  padding: 0 0 2px 5px;
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid rgb(144, 144, 144);
+}
+
+.tableHeader th:first-child {
+  opacity: 0;
+}
+
+.tableHeader th:last-child,
+.tableRow td:last-child {
+  color: #151617;
+}
+
+.headerData,
+.rowData  {
+  width: 30px;
+  text-align: center;
+}
+
+.tableRow {
+  display: flex;
+  margin: 0 0 2px 0;
+}
+
+.tableRow td:first-child {
+  margin: 0 4px 0px 0;
+}
+
+.tricode {
+  width: 46px;
+}
+
+
+
+
+
+

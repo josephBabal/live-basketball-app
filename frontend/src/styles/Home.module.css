@@ -1,0 +1,16 @@
+.homeContainer {
+  margin: 200px;
+}
+
+.imageTrack {
+  display: flex;
+  gap: 4vmin;
+  align-items: center;
+}
+
+.imageTrack > .image {
+  width: 300px;
+  height: 40vmin;
+  object-fit: cover;
+  object-position: center;
+}
