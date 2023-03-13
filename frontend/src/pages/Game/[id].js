@@ -14,7 +14,7 @@ import styles from '../../styles/curGamePage.module.css'
 
 let socket
 
-export default function GamePage({gameList}) {
+export default function GamePage({gameList, boxScore}) {
   const router = useRouter()
   const gameId = router.query.id
   // const gameList = useSelector(getGameList)
@@ -36,9 +36,12 @@ export default function GamePage({gameList}) {
     }
   }
 
+  // const [boxScore, setBoxScore] = useState()
   useEffect(() => {
     socketInitializer()
   }, [])
+
+  console.log("==boxScore", boxScore)
 
   async function socketInitializer() {
     await fetch("/api/socket");
@@ -89,12 +92,17 @@ export default function GamePage({gameList}) {
   )
 }
 
-export const getStaticProps = async() => {
+export const getStaticProps = async({params}) => {
   const res = await fetch(`http://127.0.0.1:8000/scoreboard`)
   const gameList = await res.json()
+
+  const { id } = params
+  const res2 = await fetch(`http://127.0.0.1:8000/boxScore/${id}`)
+  const boxScore = await res2.json()
   return {
     props: {
       gameList,
+      boxScore,
     },
     revalidate: 20
   }

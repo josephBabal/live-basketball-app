@@ -5,8 +5,25 @@ from nba_api.live.nba.endpoints import scoreboard
 from nba_api.stats.static import players
 from nba_api.stats.static import teams
 from nba_api.stats.endpoints import leaguegamefinder
+from nba_api.live.nba.endpoints import boxscore
+
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Configure CORS settings
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -41,8 +58,11 @@ def get_active_players():
 def get_all_teams():
     return (teams.get_teams())
 
-@app.get("/items/{item_id}")
-def read_item(item_id: str, q: str | None = None):
-    if q:
-        return {"item_id": item_id, "q": q}
-    return {"item_id": item_id}
+@app.get("/boxScore/{game_id}")
+def get_boxScore(game_id: str):
+    box = boxscore.BoxScore(game_id)
+    boxscore_data = box.game.get_dict()
+
+    # return the boxscore data as JSON
+    return boxscore_data
+
