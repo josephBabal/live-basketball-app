@@ -10,6 +10,7 @@ export default function GameScoreboard({game, awayTeamLogo, homeTeamLogo, fullDa
       <div className={styles.awayTeamContent}>
         <div>
           <div className={styles.teamName}> {game.awayTeam.teamCity} {game.awayTeam.teamName}  </div>
+          <div className={styles.teamTricode}> {game.awayTeam.teamTricode} </div>
           <div className={styles.record}> {game.awayTeam.wins} - {game.awayTeam.losses} </div>
         </div>
         <img className={styles.logo} src={awayTeamLogo.url} />
@@ -17,16 +18,17 @@ export default function GameScoreboard({game, awayTeamLogo, homeTeamLogo, fullDa
       </div>
 
       <div className={styles.gameStatus}>
-        <div> {game.gameClock === "" ? fullDate : <></>}</div>
+        <div className={styles.date}> {game.gameClock === "" ? fullDate : <></>}</div>
         <div className={styles.gameStatusText}> {game.gameStatusText}</div>
-        {game.gameClock !== "" && game.gameStatus !== "Final" ? <></> : <GammeScoreTable game={game}/>}
+        {game.gameStatus === "Final" || game.gameClock !== "" ? <GammeScoreTable game={game}/> : <></> }
       </div>
 
       <div className={styles.homeTeamContent}>
         <div className={styles.score}> {game.homeTeam.score} </div>
         <img className={styles.logo} src={homeTeamLogo.url} />
         <div>
-          <div className={styles.teamName}> {game.homeTeam.teamCity} {game.homeTeam.teamName}  </div>         
+          <div className={styles.teamName}> {game.homeTeam.teamCity} {game.homeTeam.teamName}  </div>   
+          <div className={styles.teamTricode}> {game.homeTeam.teamTricode} </div>      
           <div className={styles.record}> {game.awayTeam.wins} - {game.awayTeam.losses} </div> 
         </div>
       </div>

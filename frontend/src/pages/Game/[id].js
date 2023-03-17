@@ -10,11 +10,12 @@ import useFetchLogos from '../../hooks/useFetchLogos'
 import useFetchDate from '../../hooks/useFetchDate'
 import GammeScoreTable from '../../components/GameScoreTable'
 import styles from '../../styles/curGamePage.module.css'
-
+import Boxscore from '../../components/Boxscore'
 
 let socket
 
-export default function GamePage({gameList, boxScore}) {
+export default function GamePage({gameList, gameStats}) {
+  console.log("==gameStats", gameStats)
   const router = useRouter()
   const gameId = router.query.id
   // const gameList = useSelector(getGameList)
@@ -39,9 +40,16 @@ export default function GamePage({gameList, boxScore}) {
   // const [boxScore, setBoxScore] = useState()
   useEffect(() => {
     socketInitializer()
+    // async function fetchBoxScore() {
+    //   const res2 = await fetch(`http://127.0.0.1:8000/boxScore/${router.query.id}`)
+    //   const boxScore = await res2.json()
+    //   setBoxScore(boxScore())
+    // }
+    // fetchBoxScore()
   }, [])
 
-  console.log("==boxScore", boxScore)
+
+  // console.log("==boxScore", boxScore)
 
   async function socketInitializer() {
     await fetch("/api/socket");
@@ -61,12 +69,13 @@ export default function GamePage({gameList, boxScore}) {
       </div>
       <div className={styles.belowScoreTable}>
         <div className={styles.boxScoreContainer}>
-          box score
+          {gameStats !== "NOGAME" ? <Boxscore game={gameStats} /> : <></>}
         </div>
-        <div className={styles.liveChatContiner}>
+        <div className={styles.liveChatContainer}>
           
           {!showChat ? 
-          <div>
+          <div className={styles.loginChatContainer}>
+            {/* <button className={styles.hideButton}> hide live chat </button> */}
             <div className={styles.gameChatTitle}> Game chat  </div>
             <div className={styles.inputContainer}>
               <input 
@@ -81,6 +90,7 @@ export default function GamePage({gameList, boxScore}) {
           </div>
           :
           <div className={styles.chatContainer}>
+             {/* <button className={styles.hideButton}> hide live chat </button> */}
             <Chat socket={socket} username={username} room={room} />
           </div>
           }
@@ -97,12 +107,21 @@ export const getStaticProps = async({params}) => {
   const gameList = await res.json()
 
   const { id } = params
-  const res2 = await fetch(`http://127.0.0.1:8000/boxScore/${id}`)
-  const boxScore = await res2.json()
+
+  const game = gameList.find(game => game.gameId === id)
+  console.log("==aaggame", game)
+  let gameStats
+  if (game.gameStatusText === "Final" || game.gameStatusText !== "" && game.gameClock !== "") {
+    const res2 = await fetch(`http://127.0.0.1:8000/boxScore/${id}`)
+    gameStats = await res2.json()
+  } else {
+    gameStats = "NOGAME"
+  }
+  
   return {
     props: {
       gameList,
-      boxScore,
+      gameStats,
     },
     revalidate: 20
   }

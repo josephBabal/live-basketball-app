@@ -44,22 +44,5 @@ export default function GameCard({game}) {
         {game.gameClock === "" && game.gameStatusText !== "Final" ? <div className={CardStyles.record}> {game.homeTeam.wins} - {game.homeTeam.losses} </div> : <div className={CardStyles.liveScore}> {game.homeTeam.score} </div>}
       </div>
     </div>
-    // <div className={CardStyles.card}>
-    //   <div className={CardStyles.cardContent}>
-    //     <div className={CardStyles.awayTeam}>
-    //       {awayTeam.teamName}
-    //       {awayTeam.teamTricode}
-
-    //     </div>
-    //     <div className={CardStyles.scoreAndtime}>
-    //       {game.gameStatusText}
-    //     </div>
-    //     <div className={CardStyles.homeTeam}>
-    //       {homeTeam.teamName}
-    //     </div>
-
-    //   </div>
-      
-    // </div>
   )
 }

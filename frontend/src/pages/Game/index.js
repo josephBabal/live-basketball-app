@@ -6,13 +6,14 @@ import { addGames } from '@/redux/store'
 import { getGameList } from '../../redux/selectors'
 
 
-export default function GamePage({gameList}) {
+export default function GamePage({gameList, oldGames}) {
   const dispatch = useDispatch()
   dispatch(addGames({list :gameList}))
   // const list = useSelector(getGameList)
 
   // console.log("==list", list.value.list)
   console.log("==allGames", gameList)
+  console.log("==old games", oldGames)
   // console.log("teamList", teamList)
   return (
     <div>
@@ -23,13 +24,17 @@ export default function GamePage({gameList}) {
 }
 
 export const getServerSideProps = async() => {
-    const res = await fetch(`http://127.0.0.1:8000/scoreboard`)
-    const gameList = await res.json()
-    return {
-      props: {
-        gameList,
-      }
+  const res = await fetch(`http://127.0.0.1:8000/scoreboard`)
+  const gameList = await res.json()
+  // const oldGamesRes = await fetch(`http://127.0.0.1:8000/yesterday`)
+  // const oldGames = await oldGamesRes.json()
+  
+  return {
+    props: {
+      gameList,
+      // oldGames,
     }
+  }
 }
 
 

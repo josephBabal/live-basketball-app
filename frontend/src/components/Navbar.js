@@ -32,7 +32,7 @@ export default function Navbar() {
     
       <div className={toggleBtn ? (`${NavStyles.dropdownMenu} ${NavStyles.open}`) : `${NavStyles.dropdownMenu}` } >
         <li> <Link href="/" className={NavStyles.link}> Home </Link> </li>
-        <li> <Link href="/Games" className={NavStyles.link}> Games </Link> </li>
+        <li> <Link href="/Game" className={NavStyles.link}> Games </Link> </li>
       </div>
     </header>
   )

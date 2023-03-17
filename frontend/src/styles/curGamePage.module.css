@@ -5,18 +5,30 @@
 
 .belowScoreTable {
   display: flex;
+  height: 100vh;
 }
 
 .boxScoreContainer {
   width: 70%;
-  height: 500px;
-  border-right: 1px solid rgb(120, 120, 120);
+  /* border-right: 1px solid rgb(120, 120, 120); */
 }
 
-.liveChatContiner {
-  width: 30%;
+.liveChatContainer {
+  width: 400px;
   display: flex;
   flex-direction: column;
+}
+
+.hideButton {
+  width: 115px;
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.loginChatContainer {
+  margin: 0 10px 0 0;
 }
 
 .gameChatTitle {
@@ -53,7 +65,23 @@
   cursor: pointer;
 }
 
-.chatContainer {
-  display: flex;
-  justify-content: center;
+
+
+
+@media(max-width: 1200px) {
+  .belowScoreTable {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }  
+
+  .boxScoreContainer {
+    width: 100%;
+  }
+
+}
+
+@media(max-width: 750px) {
+ 
+
 }

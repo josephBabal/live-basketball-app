@@ -1,0 +1,126 @@
+/* Boxscore component css */
+.boxscoreContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0 0 0;
+}
+
+.teamButton {
+  border: 1px solid rgb(130, 130, 130);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+#selected {
+  background: lightblue;
+}
+
+#notSelected {
+  background: transparent
+}
+
+/* teamBoxScore component css */
+
+.teamBoxscoreContainer {
+  display: flex;
+  margin: 10px 0px 0 0;
+}
+
+.boxscoreTable {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 0 10px 0 0;
+  font-size: 0.8rem;
+}
+
+
+.boxscoreTable tr:not(:last-child) {
+  border-bottom: 1px solid black;
+  /* z-index: 0; */
+}
+
+
+.boxscoreCategory {
+  display: flex;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  line-height: 30px;
+}
+
+#benchText {
+  border-top: 1px solid black;
+}
+
+.starterTxt {
+  width: 145px;
+  text-align: left;
+  border-right: 1px solid black;
+  margin-left: 10px;
+}
+
+
+.boxscoreCategory th:not(:first-child) {
+  width: 45px;
+}
+
+
+.playerStats {
+  display: flex;
+}
+
+.playerStats td:not(:first-child) {
+  width: 45px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.tableBody tr:nth-child(odd) {
+  background: rgba(240, 240, 240, 0.3);
+}
+
+.tableBody tr:nth-child(even) {
+  background: white;
+}
+
+.playerName {
+  width: 145px;
+  line-height: 30px;
+  text-align: left;
+  margin-left: 10px;
+  border-right: 1px solid black;
+}
+
+
+/* .playerStats td.notPlayingTxt {
+  display: flex;
+} */
+
+
+@media(max-width: 1200px) {
+  .boxscoreTable {
+    width: 800px;
+    font-size: 0.8rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .boxscoreTable {
+    width: 700px;
+    font-size: 0.7rem;
+  }
+}
+
+@media(max-width: 750px) {
+  .boxscoreTable {
+    width: 530px;
+    font-size: 0.5rem;
+  }
+
+}

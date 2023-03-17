@@ -14,7 +14,7 @@ header {
 
 html,
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: rgb(250, 250, 250);
   color: black;
   margin: 0 10px;

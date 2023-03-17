@@ -30,6 +30,10 @@
   font-size: 1.2rem;
 }
 
+.teamTricode {
+  display: none;
+}
+
 .score {
   font-size: 1.9rem;
   font-weight: bold;
@@ -38,15 +42,75 @@
 .gameStatus {
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 120px;
   align-items: center;
   font-size: 0.8rem;
 }
 
+.date {
+  width: 120px;
+}
+
 .gameStatusText {
-  margin: 5px 0 0 0;
+  margin: 5px 0 5px 0;
 }
 
 .record {
   font-size: 0.8rem;
+}
+
+@media(max-width: 1200px) {
+  .teamName {
+    font-size: 1.0rem;
+  }
+
+  .gameStatus {
+    font-size: 0.7rem;
+  }
+
+  .date {
+    width: 100px;
+  }
+
+  .score {
+    font-size: 1.5rem;
+  }
+
+  .record {
+    font-size: 0.6rem;
+  }
+
+  .logo {
+    width: 40px;
+  }
+}
+
+@media(max-width: 1000px) {
+  .teamName {
+    font-size: 0.9rem;
+  }
+}
+
+@media(max-width: 800px) {
+  .scoreboardContainer {
+    gap: 40px;
+  }
+
+  .teamName {
+    display: none;
+  }
+
+  .teamTricode {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    width: 30px;
+  }
+
+  .score {
+    font-size: 1.2rem;
+  }
+
 }

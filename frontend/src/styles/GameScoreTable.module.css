@@ -1,42 +1,3 @@
-/* .tableContainer {
-  font-size: 0.7rem;
-  width: 200px;
-  color: rgb(160, 160, 160);
-}
-
-.periodRow {
-  display: flex;
-  justify-content: center;
-  padding: 10px 10px 5px 50px;
-  border-bottom: 1px solid rgb(144, 144, 144);
-}
-
-.period {
-  width: 30px;
-}
-
-
-.teamPeriodScoreContainer {
-  display: flex;
-  margin: 5px 100px 0 0;
-}
-
-.tricode {
-  min-width: 46px;
-}
-
-.periodScoreRow {
-  display: flex;
-  width: 100%;
-  gap: 23px;
-  margin-left: 2px;
-}
-
-.periodScore {
-  width: 30px;
-} */
-
-
 /*  */
 
 .table {
@@ -80,6 +41,32 @@
   width: 46px;
 }
 
+
+@media(max-width: 1200px) {
+  .table {
+    font-size: 0.6rem;
+  }
+  /* .headerData,
+  .rowData  {
+    width: 20px;
+  }
+
+  .table {
+    padding: 0 20px;
+  } */
+
+}
+
+@media(max-width: 800px) {
+  .table {
+    font-size: 0.5rem;
+  }
+  .headerData,
+  .rowData  {
+    width: 20px;
+  }
+
+}
 
 
 

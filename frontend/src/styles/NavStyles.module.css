@@ -41,7 +41,6 @@
 
 /* drop down menu */
 
-
 .dropdownMenu {
   display: none;
   position: absolute;
@@ -50,10 +49,11 @@
   width: 300px;
   height: 0;
   list-style: none;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
+  z-index: 2;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -66,6 +66,7 @@
 
 .dropdownMenu.open{
   height: 85px;
+  z-index: 2;
 }
 
 
