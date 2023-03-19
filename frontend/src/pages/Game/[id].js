@@ -59,7 +59,7 @@ export default function GamePage({gameList, gameStats}) {
 
   return (
     <div className={styles.pageContainer}>
-      <div>
+      <div className={styles.scoreboardContainer}>
         <GameScoreBoard 
           game={curGame} 
           awayTeamLogo={awayTeamLogo}
@@ -67,38 +67,38 @@ export default function GamePage({gameList, gameStats}) {
           fullDate={fullDate}
         />
       </div>
-      <div className={styles.belowScoreTable}>
-        <div className={styles.boxScoreContainer}>
-          {gameStats !== "NOGAME" ? <Boxscore game={gameStats} /> : <></>}
-        </div>
-        <div className={styles.liveChatContainer}>
-          
-          {!showChat ? 
-          <div className={styles.loginChatContainer}>
-            {/* <button className={styles.hideButton}> hide live chat </button> */}
-            <div className={styles.gameChatTitle}> Game chat  </div>
-            <div className={styles.inputContainer}>
-              <input 
-                className={styles.inputField}
-                type="text"
-                placeholder="enter username"
-                value={username}
-                onChange={e => setUsername(e.target.value)}
-              />
-              <button className={styles.joinBtn} onClick={joinRoom}> join room </button>
+      {gameStats !== "NOGAME" ?
+        <div className={styles.belowScoreTable}>
+          <div className={styles.boxScoreContainer}>
+            <Boxscore game={gameStats} />
+          </div>
+          <div className={styles.liveChatContainer}>
+            
+            {!showChat ? 
+            <div className={styles.loginChatContainer}>
+              {/* <button className={styles.hideButton}> hide live chat </button> */}
+              <div className={styles.liveChatTitle}> Game chat  </div>
+              <div className={styles.inputContainer}>
+                <input 
+                  className={styles.inputField}
+                  type="text"
+                  placeholder="enter username"
+                  value={username}
+                  onChange={e => setUsername(e.target.value)}
+                />
+                <button className={styles.joinBtn} onClick={joinRoom}> join room </button>
+              </div>
             </div>
+            :
+            <div className={styles.chatContainer}>
+              {/* <button className={styles.hideButton}> hide live chat </button> */}
+              <Chat socket={socket} username={username} room={room} />
+            </div>
+            }
           </div>
-          :
-          <div className={styles.chatContainer}>
-             {/* <button className={styles.hideButton}> hide live chat </button> */}
-            <Chat socket={socket} username={username} room={room} />
-          </div>
-          }
-          {/* <Link href="/"> Go back</Link> */}
-        </div>
-        
-        </div>
-      </div>
+        </div> : <></>}
+
+    </div>
   )
 }
 

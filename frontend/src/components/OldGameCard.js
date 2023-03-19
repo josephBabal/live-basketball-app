@@ -32,8 +32,8 @@ export default function OldGameCard({gameId}) {
   }, [])
   
 
-  console.log("==after setting", game)
-
+  console.log("==after setting", game.homeTeam)
+  
 
   // const [ awayTeamLogo, homeTeamLogo] = useFetchLogos(game.awayTeam.teamTricode, game.homeTeam.teamTricode)
   

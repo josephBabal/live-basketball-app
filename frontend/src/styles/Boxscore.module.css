@@ -7,18 +7,41 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
   margin: 15px 0 0 0;
 }
 
-.teamButton {
-  border: 1px solid rgb(130, 130, 130);
-  padding: 10px 20px 10px 20px;
+.teamButton1 {
+  border-left: 1.6px solid rgb(130, 130, 130);
+  border-top: 1.6px solid rgb(130, 130, 130);
+  border-bottom: 1.6px solid rgb(130, 130, 130);
+  border-right: none;
+  width: 150px;
+  padding: 7px 20px 7px 20px;
   cursor: pointer;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: transparent;
+  font-size: 0.8rem;
+}
+
+.teamButton2 {
+  border-right: 1.6px solid rgb(130, 130, 130);
+  border-top: 1.6px solid rgb(130, 130, 130);
+  border-bottom: 1.6px solid rgb(130, 130, 130);
+  border-left: 1.6px solid rgb(130, 130, 130);
+  width: 150px;
+  padding: 7px 20px 7px 20px;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: transparent;
+  font-size: 0.8rem;
 }
 
 #selected {
-  background: lightblue;
+  background: rgb(70, 70, 70);
+  color: white;
 }
 
 #notSelected {

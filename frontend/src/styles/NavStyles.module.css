@@ -19,12 +19,15 @@
 
 .link {
   text-decoration: none;
+  padding: 10px 20px;
   color: black;
   font-size: 1rem;
+  transition: ease-in-out 110ms
 }
 
 .link:hover {
-  color: lightblue;
+  background: rgb(70, 70, 70);
+  color: white;
 }
 
 .nav .links {

@@ -32,14 +32,14 @@ export default function Boxscore({game}) {
     <div className={styles.boxscoreContainer}>
       <div className={styles.buttonContainer}>
         <button
-          className={styles.teamButton} 
+          className={styles.teamButton1} 
           id={isSelected ? styles.selected : styles.notSelected}
           onClick={handleSelected}
         > 
           {game.awayTeam.teamName} 
         </button> 
         <button 
-          className={styles.teamButton} 
+          className={styles.teamButton2} 
           id={isSelected ? styles.notSelected : styles.selected}
           onClick={handleSelected}
         > 

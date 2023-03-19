@@ -1,5 +1,5 @@
 .chatWindow {
-  width: 300px;
+  width: 350px;
   height: 420px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .chatBody {
-  width: 300px;
+  width: 350px;
   height: calc(450px - (45px + 70px));
   border-left: 1px solid rgba(130, 130, 130, 0.1);
   border-right: 1px solid rgba(130, 130, 130, 0.1);
@@ -118,18 +118,18 @@
 }
 
 .footerInput {
-
   border: none;
   border-top: 1px solid black;
   /* height: auto; */
-  width: 300px;
+  width: 350px;
   padding: 10px 50px 10px 10px;
   outline: none;
   font-size: 0.9rem;
   overflow-wrap: break-word;
   word-break: break-all;
   overflow-y: hidden;
-  resize: none
+  resize: none;
+  margin: 0 0 100px 0;
 }
 
 
@@ -142,4 +142,12 @@
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+@media(max-width: 1300px) {
+  .chatWindow,
+  .chatBody,
+  .footerInput {
+    width: 100%;
+  }
 }

@@ -4,7 +4,7 @@ import GameList from '../../components/GameList'
 import { useDispatch, useSelector } from 'react-redux'
 import { addGames } from '@/redux/store'
 import { getGameList } from '../../redux/selectors'
-
+import styles from '../../styles/GamePage.module.css'
 
 export default function GamePage({gameList, oldGames}) {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ export default function GamePage({gameList, oldGames}) {
   console.log("==old games", oldGames)
   // console.log("teamList", teamList)
   return (
-    <div>
+    <div className={styles.GamePageContainer}>
       Todays games
       <GameList gameList={gameList}/>
     </div>

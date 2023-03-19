@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <header>
       <div className={NavStyles.nav}>
-        <div className={NavStyles.logo}> logo </div>
+        <div className={NavStyles.logo}> Live Basketball Games </div>
         <ul className={NavStyles.links}>
           <li> <Link href="/" className={NavStyles.link}> Home </Link> </li>
           <li> <Link href="/Game" className={NavStyles.link}> Games </Link> </li>

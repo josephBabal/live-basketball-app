@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 100px;
   border: 1px solid rgb(200, 200, 200);
-  padding: 30px;
+  padding: 30px 10px;
 }
 
 .logo {
@@ -45,6 +45,7 @@
   width: 120px;
   align-items: center;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 .date {
@@ -91,7 +92,7 @@
   }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 850px) {
   .scoreboardContainer {
     gap: 40px;
   }
@@ -112,5 +113,6 @@
   .score {
     font-size: 1.2rem;
   }
+
 
 }

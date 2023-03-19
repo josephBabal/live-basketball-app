@@ -12,6 +12,13 @@ from nba_api.stats.endpoints import boxscoretraditionalv2
 
 from fastapi.middleware.cors import CORSMiddleware
 
+# from mongo_client import users_collection
+# from mongo_client import favorite_teams_collection
+# from mongo_client import db
+# from bson.objectid import ObjectId
+
+# from pymongo import MongoClient
+
 app = FastAPI()
 
 # Configure CORS settings
@@ -32,6 +39,37 @@ app.add_middleware(
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+# * login/user
+# Add a new user to the users_collection
+# @app.post("/addUser/{username}/{password}")
+# async def add_user(username: str, password: str):
+#     # Check if a user with the same username already exists
+#     if users_collection.find_one({"username": username}):
+#         return {"error": "Username already exists"}
+    
+#     # Insert the new user into the users_collection
+#     user = {
+#         "_id": ObjectId(),
+#         "username": username,
+#         "password": password
+#     }
+
+#     result = users_collection.insert_one(user)    
+#     # Return the new user's ID
+#     return str(result.inserted_id)
+
+
+# # Get all the users from the users_collection
+# @app.get("/getUsers")
+# async def get_all_users():
+#     print("==here")
+#     users = []
+#     for user in users_collection.find():
+#         print("id", user["_id"], "username", user["username"], "pass", [user["password"]])
+#         users.append({"id": str(user["_id"]), "username": user["username"], "password": user["password"]})
+#     return users
+
 
 @app.get("/scoreboard")
 def get_scoreboard():
