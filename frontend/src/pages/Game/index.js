@@ -18,7 +18,7 @@ export default function GamePage({gameList, oldGames}) {
   return (
     <div className={styles.GamePageContainer}>
       Todays games
-      <GameList gameList={gameList}/>
+      {gameList.length > 0 ? <GameList gameList={gameList}/> : <p> No games</p>}
     </div>
   )
 }

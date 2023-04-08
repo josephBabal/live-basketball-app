@@ -68,36 +68,36 @@ export default function GamePage({gameList, gameStats}) {
         />
       </div>
       {gameStats !== "NOGAME" ?
-        <div className={styles.belowScoreTable}>
-          <div className={styles.boxScoreContainer}>
-            <Boxscore game={gameStats} />
-          </div>
-          <div className={styles.liveChatContainer}>
-            
-            {!showChat ? 
-            <div className={styles.loginChatContainer}>
-              {/* <button className={styles.hideButton}> hide live chat </button> */}
-              <div className={styles.liveChatTitle}> Game chat  </div>
-              <div className={styles.inputContainer}>
-                <input 
-                  className={styles.inputField}
-                  type="text"
-                  placeholder="enter username"
-                  value={username}
-                  onChange={e => setUsername(e.target.value)}
-                />
-                <button className={styles.joinBtn} onClick={joinRoom}> join room </button>
-              </div>
+      <div className={styles.belowScoreTable}>
+        <div className={styles.boxScoreContainer}>
+          <Boxscore game={gameStats} />
+        </div>
+        <div className={styles.liveChatContainer}>
+          
+          {!showChat ? 
+          <div className={styles.loginChatContainer}>
+            {/* <button className={styles.hideButton}> hide live chat </button> */}
+            <div className={styles.liveChatTitle}> Game chat  </div>
+            <div className={styles.inputContainer}>
+              <input 
+                className={styles.inputField}
+                type="text"
+                placeholder="enter username"
+                value={username}
+                onChange={e => setUsername(e.target.value)}
+              />
+              <button className={styles.joinBtn} onClick={joinRoom}> join room </button>
             </div>
-            :
-            <div className={styles.chatContainer}>
-              {/* <button className={styles.hideButton}> hide live chat </button> */}
-              <Chat socket={socket} username={username} room={room} />
-            </div>
-            }
           </div>
-        </div> : <></>}
-
+          :
+          <div className={styles.chatContainer}>
+             {/* <button className={styles.hideButton}> hide live chat </button> */}
+            <Chat socket={socket} username={username} room={room} />
+          </div>
+          }
+        </div>
+      </div> : <></>}
+      
     </div>
   )
 }
