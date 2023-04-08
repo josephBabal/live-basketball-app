@@ -4,7 +4,12 @@
 <img width="100px" height="30px" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
 </div>
 
-<h4 align="center">  Live NBA Games. This shows live NBA scores and boxscores. Users can chat with other users in the live chat.
+<h4 align="center"> 
+ Welcome to Live NBA Games
+</h4>
+
+<h4 align="center">
+This shows live NBA scores and boxscores. Users can chat with other users in the live chat.
 </h4>
 
 <h3 align="center"> This project will be deployed soon </h3>
@@ -12,11 +17,11 @@
 <h3 align="center"> Preview </h3>
 <div align="center">
 
-![img-1](screenshots/bball-img1.pngpng)
+<img src="screenshots/bball-img1.png" alt="Alt Text" width="500"/>
 
-![img-2](screenshots/bball-img2.pngpng)
+<img src="screenshots/bball-img2.png" alt="Alt Text" width="500"/>
 
-![img-3](screenshots/bball-img3.pngpng)
+<img src="screenshots/bball-img3.png" alt="Alt Text" width="500"/>
 </div>
 
 
