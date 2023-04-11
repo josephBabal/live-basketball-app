@@ -22,7 +22,10 @@ This shows live NBA scores and boxscores. Users can chat with other users in the
 <img src="screenshots/bball-img2.png" alt="Alt Text" width="500"/>
 
 <img src="screenshots/bball-img3.png" alt="Alt Text" width="500"/>
+
+<img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"  alt="Alt Text" width="500" />
 </div>
+
 
 
 
