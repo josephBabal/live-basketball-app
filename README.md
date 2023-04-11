@@ -2,6 +2,8 @@
 <img width="100px" height="30px" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"/>
 <img width="100px" height="30px" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
 <img width="100px" height="30px" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+
+<img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"  alt="Alt Text" width="100px" height="30px" />
 </div>
 
 <h4 align="center"> 
@@ -23,7 +25,6 @@ This shows live NBA scores and boxscores. Users can chat with other users in the
 
 <img src="screenshots/bball-img3.png" alt="Alt Text" width="500"/>
 
-<img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"  alt="Alt Text" width="500" />
 </div>
 
 
