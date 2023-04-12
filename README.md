@@ -6,6 +6,12 @@
 <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi"  alt="Alt Text" width="100px" height="30px" />
 </div>
 
+<h3 align="center"> 
+NOTE: Not all the code
+has been pushed to the repository 
+so it won't fully work when you clone it.
+</h3>
+
 <h4 align="center"> 
  Welcome to Live NBA Games
 </h4>
