@@ -1,2 +1,6 @@
-mongo_client.py
+backend/mongo_client.py
 node_modules
+# screenshots
+backend
+backend/requirements.txt
+backend/env
