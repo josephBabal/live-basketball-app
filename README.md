@@ -7,9 +7,7 @@
 </div>
 
 <h3 align="center"> 
-NOTE: Not all the code
-has been pushed to the repository 
-so it won't fully work when you clone it.
+NOTE: It won't work when you clone it due to out-of-date packages.
 </h3>
 
 <h4 align="center"> 
@@ -32,12 +30,3 @@ This shows live NBA scores and boxscores. Users can chat with other users in the
 <img src="screenshots/bball-img3.png" alt="Alt Text" width="500"/>
 
 </div>
-
-
-
-
-
-
-
-activate virtual environment: source env/bin/activate
-run: uvicorn main:app --reload
