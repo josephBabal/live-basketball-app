@@ -18,7 +18,6 @@ NOTE: It won't work when you clone it due to out-of-date packages.
 This shows live NBA scores and boxscores. Users can chat with other users in the live chat.
 </h4>
 
-<h3 align="center"> This project will be deployed soon </h3>
 
 <h3 align="center"> Preview </h3>
 <div align="center">
